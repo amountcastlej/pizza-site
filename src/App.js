@@ -1,23 +1,57 @@
-import logo from './logo.svg';
 import './App.css';
+import Navigation from './components/Navigation';
+import Header from './components/Header';
+import Main from './components/Main';
+import Footer from './components/Footer';
+
+const headerInfo = ([
+  {"company" : "Adam's Website",
+  "home" : "Home",
+  "about" : "About",
+  "contact" : "Contact"
+}
+])
+
+const footerInfo = ([
+  {
+    "copyright": "2022 Adam Joines",
+    "site" : "www.seinstitute.com",
+    "gh" : "amountcastlej",
+    "linkedIn" : "amountcastlej"
+  }
+])
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App-header">
+      {
+        headerInfo.map((info, i)=>{
+          return<Header 
+          key={i}
+          company={info.company}
+          home={info.home}
+          about={info.about}
+          contact={info.contact}
+          />
+        })
+        
+      }
+      <div className='middle'>
+        <Navigation />
+        <Main />
+      </div>
+      {
+        footerInfo.map((info, i)=>{
+          return <Footer
+          key={i}
+          copyright={info.copyright}
+          site={info.site}
+          gh={info.gh}
+          linkedIn={info.linkedIn}
+          />
+        })
+      
+      }
     </div>
   );
 }
