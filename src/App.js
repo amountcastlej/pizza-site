@@ -14,10 +14,9 @@ const headerInfo = ([
 
 const footerInfo = ([
   {
-    "copyright": "2022 Adam Joines",
+    "copyright": "Copyright: 2022 Adam Joines",
     "site" : "www.seinstitute.com",
-    "gh" : "amountcastlej",
-    "linkedIn" : "amountcastlej"
+    "gh" : "amountcastlej"
   }
 ])
 
@@ -37,7 +36,8 @@ function App() {
         
       }
       <div className='middle'>
-        <Navigation />
+        
+        <Navigation/>
         <Main />
       </div>
       {
@@ -47,7 +47,6 @@ function App() {
           copyright={info.copyright}
           site={info.site}
           gh={info.gh}
-          linkedIn={info.linkedIn}
           />
         })
       

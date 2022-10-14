@@ -8,8 +8,7 @@ const Footer = (props) => {
       <h3>{copyright}</h3>
       <ul className="footBtn">
         <li>{site}</li>
-        <li>{gh}</li>
-        <li>{linkedIn}</li>
+        <li>Github / LinkedIn: {gh}</li>
       </ul>
     
     </div>

@@ -65,7 +65,7 @@
 .footer{
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   width: 98%;
   height: 17vh;
   margin: 20px 10px;

@@ -1,8 +1,11 @@
 import React from 'react'
 
-const Navigation = () => {
+const Navigation = (props) => {
+  const {more, days, hours} = props
+
   return (
-    <div className='navigation'>Navigation</div>
+    <div className='navigation'>Navigation
+    </div>
   )
 }
 
