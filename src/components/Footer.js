@@ -1,18 +1,26 @@
-import React from 'react'
+import React from "react";
 
-const Footer = (props) => {
-  const {copyright, site, gh, linkedIn} = props;
+const Form = () => {
+  const footerInfo = [
+    {
+      copyright: "Copyright: 2022 Adam Joines",
+      site: "www.seinstitute.com",
+      gh: "amountcastlej"
+    }
+  ];
 
   return (
-    <div className="footer">
-      <h3>{copyright}</h3>
-      <ul className="footBtn">
-        <li>{site}</li>
-        <li>Github / LinkedIn: {gh}</li>
-      </ul>
-    
+    <div>
+      {footerInfo.map((info, i) => {
+        return (
+          <div className="footer">
+            <p>{info.copyright}</p>
+            <p>{info.site}</p>
+            <p>{info.gh}</p>
+          </div>
+        );
+      })}
     </div>
-  )
-}
-
-export default Footer
+  );
+};
+export default Form;
