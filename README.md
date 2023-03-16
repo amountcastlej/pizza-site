@@ -1,4 +1,4 @@
-# Video Game app
+<h1>Video Game app</h1>
 
 I created this website using React front end; express and nodeJS as the backend, and MongoDB as the database.  
 
